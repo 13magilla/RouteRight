@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:background="#383838">
+
+        <TextView
+            android:id="@+id/basicInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/ping"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/basicInfoTitle"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/ip_address"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/ping_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/ping_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ping_address"
+            android:layout_marginTop="24dp"
+            android:layout_alignLeft="@+id/ping_address"
+            android:background="@drawable/back_arrow"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/ping_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ping_address"
+            android:layout_alignRight="@id/ping_address"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/blank_button"
+            android:onClick="pinger"
+            android:text="Ping" />
+
+        <ScrollView
+            android:id="@+id/ping_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ping_calculate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="26dp">
+
+            <TextView
+                android:id="@+id/ping_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold|italic" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

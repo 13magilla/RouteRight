@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b9bff">
+
+    <TextView
+        android:id="@+id/portMapTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Port Mappings:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/portMapTitle"
+        android:orientation="vertical">
+
+
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"></ListView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            >
+
+
+                <Button
+                        android:id="@+id/portmap_edit"
+                        android:text="@string/edit"
+
+                        android:layout_width="0dp"
+                        android:layout_weight=".25"
+                        android:layout_height="match_parent"
+                    />
+                <Button
+                    android:id="@+id/portmap_delete"
+                    android:text="@string/delete"
+                    android:layout_weight=".25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    />
+                <Button
+                    android:id="@+id/portmap_add"
+                    android:text="@string/add"
+                    android:layout_weight=".50"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                     />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
